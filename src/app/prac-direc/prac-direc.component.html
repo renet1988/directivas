@@ -1,0 +1,25 @@
+<button (click)="callBandera()">Call Bandera</button>
+<div *ngIf='bandera'>
+    <img src="../../assets/imagenes/logo.png" alt="Logo Inter">
+</div>
+<br>
+<div>
+    <h4>PRACTICA WIII</h4>
+    <ul appFirst *ngFor="let person of people" [ngSwitch]="person.country">
+        <li *ngSwitchCase="'BO'" style="color: lightgray">
+            {{ person.name }} ({{ person.country }})
+        </li>
+        <li *ngSwitchCase="'USA'" style="color:lightcoraly">
+            {{ person.name }} ({{ person.country }})
+        </li>
+        <li *ngSwitchDefault style="color: lightblue">
+            {{ person.name }} ({{ person.country }})
+        </li>
+    </ul>
+</div>
+
+<div>
+    <button appFirst>Mi primera directiva!</button>
+    <p appFirst>Esto esta quedando bastante bien :D</p>
+    <h1 appFirst>Como vemo da igual la etiqueta HTML que lo contenga</h1>
+</div>
